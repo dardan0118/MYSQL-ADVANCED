@@ -1,0 +1,10 @@
+1.
+SELECT game.name ,platform.platform , game.genre_id FROM game JOIN platform ON platform.id = game.platform_id WHERE `name` like "b%"
+2.
+SELECT game.name ,platform.platform , game.`publisher_id` FROM game JOIN platform ON platform.id = game.platform_id WHERE `year` = 2013
+3.
+SELECT game.name ,platform.platform , game.global_sales FROM game JOIN platform ON platform.id = game.platform_id WHERE `year` > 2000 AND `genre_id`= 5
+4.
+SELECT game.name ,platform.platform , game.year, genre.genre , game.`jp_sales` FROM game JOIN platform ON platform.id = game.platform_id join genre on genre.id = game.genre_id WHERE `name` like 'mario%'
+5.
+SELECT game.name ,platform.platform , game.year, genre.genre , publisher.publisher FROM game JOIN platform ON platform.id = game.platform_id join genre on genre.id = game.genre_id join publisher on publisher.id = game.publisher_id WHERE `platform` = 'pc
